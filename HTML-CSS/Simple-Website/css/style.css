@@ -154,6 +154,13 @@ button {
 	background-color: #c7dc54;
 	border-radius: 10px;
 	border: 1px solid #3e3e3e;
+	transition: background .2s ease-in;
+}
+
+button:hover {
+	transition: .3 ease-in;
+	background: #dbee7b;
+	cursor: pointer;
 }
 
 /* END SLIDER */
