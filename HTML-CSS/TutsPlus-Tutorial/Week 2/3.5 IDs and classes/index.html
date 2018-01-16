@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="css/style.css">
+		<title>My First Website</title>
+
+		<style>
+		#emp {
+			color: crimson;
+		}
+
+		.emp {
+			color: forestgreen;
+		}
+
+		li:nth-child(4) {
+			color: darksalmon;
+		}
+
+		ul:first-of-type>li:nth-child(3) {
+			color: orange;
+		}
+		</style>
+
+	</head>
+	<body>
+		<ul>
+			<li>This</li>
+			<li>Is</li>
+			<li>My</li>
+			<li>List</li>
+		</ul>
+
+		<ul>
+			<li id="emp">This</li>
+			<li class="emp">Is</li>
+			<li>My</li>
+			<li>List</li>
+		</ul>
+
+		<ul>
+			<li>This</li>
+			<li>Is</li>
+			<li>My</li>
+			<li>List</li>
+		</ul>
+	</body>
+</html>
