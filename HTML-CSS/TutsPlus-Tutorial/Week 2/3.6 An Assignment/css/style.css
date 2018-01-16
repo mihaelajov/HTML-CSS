@@ -1,0 +1,19 @@
+* {
+	font-family: Arial, sans-serif;\
+}
+
+body {
+	background-color: lightgrey;
+}
+
+.wrapper {
+	width: 800px;
+	margin: 10px auto;
+}
+
+blockquote {
+	text-align: center;
+	border: 1px solid #fff;
+	padding: 20px;
+}
+
