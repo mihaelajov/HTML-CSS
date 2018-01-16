@@ -173,6 +173,10 @@ button:hover {
 	padding: 30px;
 }
 
+.article {
+	width: 60%;
+}
+
 .top-green-border {
 	margin:0;
 	height: 5px;
@@ -214,6 +218,89 @@ p.green-border-left {
 	padding-left: 30px;
 }
 
+/* SIDEBAR */
+
+.sidebar {
+	width: 35%;
+	margin-top: 3%;
+}
+
+.sidebar-title {
+	height: 50px;
+	background: rgba(58,58,58,1);
+	background: -moz-linear-gradient(top, rgba(58,58,58,1) 0%, rgba(68,68,68,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(58,58,58,1)), color-stop(100%, rgba(68,68,68,1)));
+	background: -webkit-linear-gradient(top, rgba(58,58,58,1) 0%, rgba(68,68,68,1) 100%);
+	background: -o-linear-gradient(top, rgba(58,58,58,1) 0%, rgba(68,68,68,1) 100%);
+	background: -ms-linear-gradient(top, rgba(58,58,58,1) 0%, rgba(68,68,68,1) 100%);
+	background: linear-gradient(to bottom, rgba(58,58,58,1) 0%, rgba(68,68,68,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a3a3a', endColorstr='#444444', GradientType=0 );
+	border-bottom: 1px solid #6b6b6b;
+}
+
+.sidebar-title>p {
+	font-size: 18px;
+	padding: 14px;
+}
+
+.sidebar-content {
+	background-color: #efefef;
+}
+
+.sidebar-content>div {
+	height: 33.33333333%;
+	padding: 20px;
+	display: inline-flex;
+}
+
+.sidebar-content>div:first-child {
+	border-top: 1px solid #070707;
+	border-bottom: 1px solid #d6d6d6;
+	border-left: 1px solid #d6d6d6;
+	border-right: 1px solid #d6d6d6;
+}
+
+.sidebar-content>div:nth-child(2) {
+	background-color: #dfdfdf;
+	border-top: 1px solid #f4f4f4;
+}
+
+.sidebar-content>div:nth-child(3) {
+	border-bottom: 1px solid #d6d6d6;
+	border-left: 1px solid #d6d6d6;
+	border-right: 1px solid #d6d6d6;
+}
+
+.sidebar-content-photo {
+	float: left;
+	margin-right: 15px;
+}
+
+.sidebar-content-photo>img {
+	width: 100px;
+
+}
+
+.sudebar-content-text {
+	float: right;
+}
+
+.sidebar-content-text>p {
+	font-size: 15px;
+}
+
+.sidebar-content-text>p:first-child {
+	text-transform: uppercase;
+	padding-bottom: 3px;
+}
+
+.sidebar-content-text>p:nth-child(2) {
+	font-weight: bold;
+}
+
+
+
+/* END SIDEBAR */
 /* END MAIN CONTENT */
 
 /* FOOTER */
