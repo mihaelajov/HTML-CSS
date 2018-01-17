@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/style.css">
+		<title>My Website</title>
+	</head>
+	<body>
+		<form action="" method="get">  <!-- In "action" you can write for example "contact.php", so everything that is written in the form will be transfered to the "contact.php" file -->
+			<ul>
+				<li>
+					<label for="YourName">Enter your name:</label>
+					<input id="YourName" name="YourName" type="text">
+				</li>
+				<li>
+					<label for="comment">Enter your comment here:</label>
+					<textarea name="comment" id="comment"></textarea>
+				</li>
+				<li>
+					<label for="lang">Favourite Language?</label>
+					<input type="radio" id="lang" name="language" value="css">CSS
+					<input type="radio" id="lang" name="language" value="html">HTML
+					<input type="radio" id="lang" name="language" value="php">PHP
+					<input type="radio" id="lang" name="language" value="js">JavaScript
+					<!-- When a user clicks on a radio-button, it becomes checked, and all other radio-buttons with equal name become unchecked. -->
+				</li>
+				<li>
+					<label for="css">Do you like CSS?</label>
+					<input type="checkbox" name="css" id="css">
+				</li>
+				<li>
+					<input type="submit" value="OK">
+				</li>
+			</ul>
+		</form>
+	</body>
+</html>

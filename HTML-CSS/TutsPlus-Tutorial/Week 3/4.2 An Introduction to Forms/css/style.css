@@ -1,0 +1,24 @@
+/*label {
+	display: block;
+	margin-top: 20px;
+	margin-bottom: 3px;
+}*/
+
+label {
+	display: block;
+	cursor: pointer;
+}
+
+form ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+form li {
+	padding-bottom: 20px;
+}
+
+textarea {
+	width: 350px;
+	height: 180px;
+}
