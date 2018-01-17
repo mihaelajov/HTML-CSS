@@ -1,0 +1,32 @@
+.wrap {
+	min-width: 600px;
+	width: 80%;
+	margin: auto;
+	background-color: #53D3BF;
+	overflow: hidden; /* for ignoring the floating elements. Another option is using "clear: both" in the footer */
+}
+
+.content, aside {
+	height: 600px;
+}
+
+.content {
+	background-color: #3289EB;
+	float: left;
+	width: 80%;
+}
+
+aside {
+	background: #45D1EA;
+	float: left;
+	width: 20%;
+}
+
+aside ul {
+	list-style-type: none;
+	padding-left: 10px;
+}
+
+/*footer {
+	clear: both;  => for clearing the floating elements. If we have no footer, we can use "overflow: hidden" in the .wrap as well 
+}*/
