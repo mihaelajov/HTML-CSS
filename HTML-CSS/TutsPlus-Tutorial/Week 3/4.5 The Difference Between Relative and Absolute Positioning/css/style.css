@@ -1,0 +1,28 @@
+/*body {
+	margin: auto;
+	width: 600px;
+}
+*/
+.wrap {
+	width: 400px;
+	height: 800px;
+	/*position: absolute;*/
+	margin: auto;
+	background: silver;
+	top: 50px;
+}
+
+.box {
+	width: 400px;
+	height: 400px;
+	margin: auto;
+	background: #B70101;
+	position: relative; /*when it is ABSOLUTE, it is placed within its closest parent element that is positioned
+	(has position). if there is no such parent, it will be placed according to the browser window. When it is RELATIVE,
+	it will be placed according to itself, in this case because of margin auto will be placed in the center, and moved
+	35pixels to the right because of "left: 35px"*/
+	left: 35px;
+	top: 30px; /* the possible cases are "left", "right", "top" and "bottom". these can be used ONLY when there is a POSITION
+	set. The "top" moves the box down, the "bottom" moves the box up, the "right" moves the box left, and the "left" moves the
+	box up */
+}
