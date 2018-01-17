@@ -1,0 +1,28 @@
+@font-face {
+	font-family: Lobster;
+	src: url(../fonts/Lobster-Regular.ttf);
+}
+
+body {
+	background: silver;
+}
+
+h1 {
+	font-size: 250px;
+	text-align: center;
+	margin-top: 50px;
+	font-family: "Lobster", sans-serif;
+	letter-spacing: 3px;
+	color: #F78562;
+	text-transform: capitalize;
+	/*text-shadow: 2px 3px 5px silver; => values: x-offset, y-offset, blur, color */
+	text-shadow: 0 1px 0 black;
+	/* multiple shadows: 
+
+	text-shadow:
+		5px 1px 0 white,
+		7px 3px 0 black;
+	*/
+
+	/*font-variant: small-caps;*/
+}
