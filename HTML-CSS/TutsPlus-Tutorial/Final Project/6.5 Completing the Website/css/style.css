@@ -1,0 +1,223 @@
+@font-face {
+	src: url(../fonts/swiss-light.ttf);
+	font-family: "Swiss-light";
+}
+
+.container_24 {
+	margin-top: 10px;
+}
+
+.grid_3 {
+	margin-left: 60px;
+}
+
+a {
+	color: #7e7e7e;
+	text-decoration: none;
+}
+
+a:hover, .selected {
+	color: black;
+}
+
+li {
+	margin-left: 24px;
+}
+
+.button {
+	background: #242324;
+	padding: 6px;
+	color: white;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+.button:hover {
+	background-color: #000;
+	color: #fff;
+}
+
+p {
+	font-size: 13px;
+	line-height: 20px;
+	color: #353535;
+}
+
+h1, h2, h3, h4 {
+	letter-spacing: -1px;
+}
+
+h3, h4 {
+	font-size: 26px;
+	text-transform: lowercase;
+	border-bottom: 1px solid #d1d1d1;
+	padding-bottom: 20px;
+	margin-bottom: 15px;
+	line-height: 1em;
+	font-weight: normal;
+}
+
+blockquote, blockquote p {
+	font-size: 15px;
+	line-height: 20px;
+	font-style: italic;
+	color: #0e0e0e;
+}
+
+blockquote {
+	position: relative;
+}
+
+/* 
+***********************
+		=HEADER 
+***********************
+*/
+header {
+	overflow: hidden;
+}
+
+header h1 {
+	text-indent: -9999px;	
+	float: left;
+	margin-bottom: 0;
+}
+
+/*
+header h1:after {	=> CLEARFIX hack, for containing the link only within the logo. most frameworks include
+						this within their css, so you can only apply the class where needed.
+	clear: both;
+	display: block;
+	content: ' ';
+	visibility: hidden;
+	height: 1%;
+} */
+
+header h1 a {
+	background: url(../img/logo.png) no-repeat;
+	width: 174px;
+	height: 24px;
+	float: left;
+	margin: 10px 10px 22px;
+}
+
+/* 
+***********************
+		=NAV 
+***********************
+*/
+nav {
+	float: right;
+	padding-top: 12px;
+}
+nav li {
+	display: inline;
+}
+
+nav a {
+	text-transform: lowercase;
+}
+
+/* 
+***********************
+		=BANNER 
+***********************
+*/
+.banner {
+	background: url(../img/san-francisco-skyline.jpg) no-repeat;
+	width: 695px;
+	height: 231px;
+	clear: both;
+	position: relative;
+}
+
+.banner h2 {
+	font-family: "Swiss-light";
+	color: #fff;
+	font-size: 24px;
+	text-transform: lowercase;
+	width: 400px;
+	position: absolute;
+	bottom: -10px;
+	left: 10px;
+	background: rgba(0, 0, 0, 0.3);
+	padding: 0px 8px;
+	float: left;
+	font-weight: 100;/*
+	letter-spacing: -20px;*/
+}
+
+.callout {
+	height: 231px;
+	background-color: black;
+}
+
+/* 
+***********************
+		=MAIN 
+***********************
+*/
+.main {
+	margin-top: 20px;
+}
+
+.main blockquote p {
+	padding-left: 30px;
+}
+
+.main blockquote p:before,.main blockquote p:after {
+	font-size: 40px;
+	color: #bfbfbf;
+	font-style: italic;
+}
+.main blockquote p:first-child:before {
+	content: '“';
+	position: absolute;
+	top: 7px;
+	left: 0;
+}
+
+.main blockquote p:last-child:after {
+	content: '”';
+	float: right;
+	position: absolute;
+	bottom: -7px;
+	right: 0;
+}
+
+/* 
+***********************
+		=FOOTER 
+***********************
+*/
+footer {
+	clear: both;
+	border-top: 1px solid #d1d1d1;
+	padding-top: 18px;
+	margin-top: 30px;
+}
+
+/* 
+***********************
+		=WORK 
+***********************
+*/
+.work .main {
+	margin-top: 0;
+}
+
+.work img {
+	margin-bottom: 20px;
+}
+
+.work h3 {
+	border-bottom: none;
+	margin-bottom: 0;
+	padding-bottom: 2px;
+}
+
+.work h4 {
+	color: #787878;
+	line-height: 1.2em;
+}
+
