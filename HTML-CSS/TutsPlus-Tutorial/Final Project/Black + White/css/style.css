@@ -1,11 +1,20 @@
-/*@font-face {
-	font-family: "Assistant";
-	src: url('https://fonts.googleapis.com/css?family=Assistant');
-}*/
+@font-face {
+	font-family: "Swiss-light";
+	src: url('../fonts/swiss-light.ttf');
+}
 
+@font-face {
+	font-family: "Rockwell";
+	src: url('../fonts/rock.ttf');
+}
 
 * {
 	margin: 0;
+	font-family: "Swiss-light", sans-serif;
+}
+
+a {
+	text-decoration: none;
 }
 
 .black {
@@ -29,13 +38,13 @@
 }
 
 .wrap {
-	width: 80%;
+	width: 70%;
+	min-width: 1080px;
 	margin: 20px auto;
 }
 
 /* HEADER */
-header h1 {
-	font-family: Helvetica, sans-serif;
+header h1 a{
 	font-weight: 400;
 	font-size: 40px;
 	letter-spacing: -1px;
@@ -52,10 +61,12 @@ nav li {
 }
 
 nav li a {
-	text-decoration: none;
 	color: #818181;
 }
 
+.active {
+	font-weight: bold;
+}
 
 /* END HEADER */
 /* SLIDER */
@@ -65,28 +76,37 @@ nav li a {
 	height: 350px;
 }
 
+.slider div:first-child {
+	background: url(../img/san-francisco-bridge.jpg) no-repeat;
+	float: left;
+	width: 75%;
+	height: inherit;
+	background-size: cover;
+	background-position: 0 -85px;
+}
+
 .slider p {
-	font-family: "Assistant";
 	position: absolute;
 	bottom: 0px;
 	left: 16px;
-	background: rgba(0, 0, 0, 0.3);
-	padding: 7px;
 	font-size: 30px;
-	font-weight: 100;
-	width: 480px;
+	width: 500px;
 	line-height: 45px;
-
 }
 
-.main-img {
+.slider p span {
+	background: rgba(0, 0, 0, 0.5);
+	padding: 0 7px;
+}
+
+/*.main-img {
 	height: 350px;
 	width: 75%;
 	object-fit: cover;
-}
+}*/
 
 .side-img {
-	height: 350px;
+	height: inherit;
 	width: 24%;
 	background-color: #3F3F3F;
 }
@@ -114,6 +134,7 @@ nav li a {
 	margin-right: 15px;
 	border-bottom: 1px solid #d1d1d1;
 	font-size: 30px;
+	line-height: 1em;
 }
 
 .description {
@@ -122,12 +143,16 @@ nav li a {
 	line-height: 25px;
 }
 
-.more {
-	background: #000;
+.btn a{
+	background: #272727;
 	color: #fff;
 	padding: 5px;
 	text-transform: uppercase;
 	font-size: 12px;
+}
+
+.btn a:hover {
+	background: #000;
 }
 
 /* ASIDE */
@@ -136,24 +161,37 @@ nav li a {
 }
 
 aside {
-	padding: 0 25px;
+	position: relative;
 }
 
 aside blockquote {
 	font-style: italic;
 	font-size: 20px;
+	position: relative;
+	line-height: 20px;
+	padding-left: 35px;
+	padding-top: 14px;
+	margin-bottom: 10px;
+}
+
+aside blockquote:before, aside blockquote:after {
+	font-style: italic;
+	font-size: 40px;
+	color: #bfbfbf;
+	position: absolute;
+	font-family: "Rockwell";
 }
 
 aside blockquote:before {
-	content: "\201C";
-	font-size: 20px;
-	color: grey;
+	content: "“";
+	top: 14px;
+	left: 5px;	
 }
 
 aside blockquote:after {
-	content: "\201D";
-	font-size: 20px;
-	color: grey;
+	content: "”";
+	bottom: -5px;
+	right: 15px;
 }
 
 aside p {
