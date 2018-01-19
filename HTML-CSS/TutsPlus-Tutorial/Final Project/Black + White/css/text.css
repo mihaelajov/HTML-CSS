@@ -35,9 +35,9 @@ h2 {
   font-size: 23px;
 }
 
-h3 {
+/*h3 {
   font-size: 21px;
-}
+}*/
 
 h4 {
   font-size: 19px;
@@ -59,7 +59,7 @@ ol {
 }
 
 ul {
-  list-style: disc;
+  list-style: square;
 }
 
 li {
@@ -71,7 +71,7 @@ dl,
 hr,
 h1,
 h2,
-h3,
+/*h3,*/
 h4,
 h5,
 h6,

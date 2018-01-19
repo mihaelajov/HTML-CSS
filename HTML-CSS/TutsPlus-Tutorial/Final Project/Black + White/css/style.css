@@ -37,6 +37,22 @@ a {
 	float: right;
 }
 
+.wrap-25 {
+	width: 24%;
+}
+
+.wrap-35 {
+	width: 37%;
+}
+
+.wrap-50 {
+	width: 49%;
+}
+
+.wrap-75 {
+	width: 75%;
+}
+
 .wrap {
 	width: 70%;
 	min-width: 1080px;
@@ -48,7 +64,15 @@ header h1 a{
 	font-weight: 400;
 	font-size: 40px;
 	letter-spacing: -1px;
+	/*position: relative;*/
 }
+
+/*header h1 span {
+	font-size: 25px;
+	position: absolute;
+	bottom: 5px;
+	font-weight: bold;
+}*/
 
 nav ul {
 	height: 60px;
@@ -82,7 +106,6 @@ nav li a {
 	width: 75%;
 	height: inherit;
 	background-size: cover;
-	background-position: 0 -85px;
 }
 
 .slider p {
@@ -117,32 +140,28 @@ nav li a {
 	clear: both;
 	min-height: 300px;
 	overflow: hidden;
-	border-bottom: 1px solid #d1d1d1;
 }
 
 .second {
 	margin-left: 2%;
 }
 
-.text {
-	width: 37%;
-}
-
-.title {
+h3 {
 	text-transform: lowercase;
-	padding-bottom: 30px;
+	padding-bottom: 25px;
 	border-bottom: 1px solid #d1d1d1;
 	font-size: 30px;
 	line-height: 1em;
+	font-weight: 100;
 }
 
-.title:first-child {
+h3:first-child {
 	margin-right: 15px;
 }
 
 .description {
 	padding-right: 50px;
-	padding-top: 20px;
+	padding-top: 25px;
 	line-height: 25px;
 }
 
@@ -159,9 +178,6 @@ nav li a {
 }
 
 /* ASIDE */
-.aside {
-	width: 24%;
-}
 
 aside {
 	position: relative;
@@ -207,6 +223,7 @@ aside p {
 /* END CONTENT*/
 /* FOOTER */
 footer {
+	border-top: 1px solid #d1d1d1;
 	padding-top: 15px;
 }
 /* END FOOTER */
@@ -214,12 +231,8 @@ footer {
 
 /************************************** W O R K ***************************************/
 
-.work .content {
+.work .content, .services .content {
 	padding-top: 0;
-}
-
-.work .text {
-	width: 49%;
 }
 
 .img-previous {
@@ -228,7 +241,6 @@ footer {
 	height: 350px;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: 0 -40px;
 	position: relative;
 }
 
@@ -259,16 +271,45 @@ footer {
 	text-transform: uppercase;
 }
 
-.work .title {
+.work h3 {
 	margin-right: 0;
 	line-height: 1.1em;
-	margin-top: 27px;
+	margin-top: 26px;
 }
 
-.work .title span {
+.work h3 span {
 	display: block;
 }
 
 /**************************** S E R V I C E S ******************************/
+.services .wrap-75>div:first-child {
+	background: url(../img/fish-jumping.jpg) no-repeat;
+	height: 350px;
+	background-size: cover;
+	margin-bottom: 30px;
+}
 
-.services
+.services .description {
+	width: 44%;
+	padding-right: 40px;
+}
+
+.services .wrap-25 {
+	min-height: 770px;
+	background: #2c2c2c;
+}
+
+.services aside {
+	padding: 15px;
+}
+
+.services aside h3 {
+	border-bottom: none;
+	padding-bottom: 0;
+}
+
+.services aside li {
+  line-height: 35px;
+  font-size: 17px;
+  color: #8d8d8d;
+}
