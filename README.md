@@ -5,4 +5,4 @@ Learning all the technologies that are necessary for building custom web applica
 2. Gaining basic programmer logic using JavaScript
 3. PHP Basics
 4. Building native application with PHP
-5. Learning LAravel and Drupal
+5. Learning Laravel and Drupal
