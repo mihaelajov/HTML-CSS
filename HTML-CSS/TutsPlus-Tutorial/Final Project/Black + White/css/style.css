@@ -88,6 +88,10 @@ nav li a {
 	color: #818181;
 }
 
+nav li a:hover {
+	color: #000;
+}
+
 .active {
 	font-weight: bold;
 }
@@ -108,16 +112,17 @@ nav li a {
 	background-size: cover;
 }
 
-.slider p {
+.slider h2 {
 	position: absolute;
 	bottom: 0px;
 	left: 16px;
 	font-size: 30px;
 	width: 500px;
 	line-height: 45px;
+	font-weight: 100;
 }
 
-.slider p span {
+.slider h2 span {
 	background: rgba(0, 0, 0, 0.5);
 	padding: 0 7px;
 }
@@ -226,6 +231,15 @@ footer {
 	border-top: 1px solid #d1d1d1;
 	padding-top: 15px;
 }
+
+footer a{
+	border: 1px solid transparent;
+	transition: border 0.6s linear;
+	padding: 3px 5px;
+}
+footer a:hover {
+	border: 1px solid black;
+}
 /* END FOOTER */
 
 
@@ -300,16 +314,54 @@ footer {
 }
 
 .services aside {
-	padding: 15px;
+	padding: 30px;
 }
 
 .services aside h3 {
 	border-bottom: none;
-	padding-bottom: 0;
+	padding-bottom: 10px;
 }
 
 .services aside li {
   line-height: 35px;
   font-size: 17px;
   color: #8d8d8d;
+  margin-left: 20px;
+}
+
+/**************************** B L A C K   V E R S I O N *******************************/
+
+.bg-black {
+	background: #000;
+	color: #818181;
+}
+
+.bg-black a, .bg-black a strong, .bg-black h3 span {
+	color: #818181;
+}
+
+.bg-black h1 a, .bg-black h1 a strong:first-child, .bg-black h2, .bg-black h3, .bg-black .active, 
+.bg-black .btn a, .bg-black .content div div a, .bg-black footer strong, .bg-black nav li a:hover {
+	color: #fff;
+}
+
+.bg-black blockquote:before, .bg-black blockquote:after, .bg-black aside p:last-child {
+	color: #212121;
+}
+
+
+.bg-black .btn a{
+	background: #272727;
+	color: #fff;
+	transition: background .8s;
+	transition: color .4s;
+}
+
+.bg-black .btn a:hover {
+	background: #fff;
+	color: #272727;
+}
+
+.bg-black footer a:hover {
+	border: 1px solid #fff;
 }
