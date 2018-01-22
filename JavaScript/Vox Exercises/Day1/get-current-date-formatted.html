@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Get current date nicely formated</title>
+</head>
+<body>
+	<h2>Current (AM/PM) time is: </h2><div id="time"></div>
+	<h2>Current time is: </h2><div id="timeNormal"></div>
+	<h2>Current date is: </h2><div id="date1"></div>
+	<div id="date2"></div>
+	<div id="date3"></div>
+	<div id="date4"></div>
+
+	<script>
+// js denoi pocinjaa so sunday, sunday e staeno na nulta pozicija u arrayot, ponedlenik vronik za da pocinjaa so nivnata brojka
+		var dayList = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+		var today = new Date();
+		var day = today.getDay();
+		var hour = today.getHours();
+		var minute = today.getMinutes();
+		var second = today.getSeconds();
+		
+
+//narednovo dole so IF e sve za da se prikazee saatot u angliski format, so AM i PM. Ako sakame da se prikaze datumot normalno, nema potreba od ova podole
+		var prepand = (hour >= 12)? "PM" : "AM";	//za da se pokaze dali e sabajle ili pladne
+		hour = (hour >= 12)? hour-12 : hour;	//za da bida saatite do 12, a ne do 24
+		if (hour ===  0 && prepand === "PM") {
+			if (minute === 0 && second === 0) {
+				hour = 12;
+				prepand = " Noon";
+			}else {
+				hour = 12;
+				prepand = "PM";
+			}
+		}
+		if (hour === 0 && prepand === " AM") {
+			if (minute === 0 && second === 0) {
+				hour = 12;
+				prepand = " Midnight";
+			} else {
+				hour = 12;
+				prepand = "AM";
+			}
+		}
+
+
+
+		document.getElementById("time").innerHTML = "Today is: " + dayList[day] + "." + "<br>Current time is: " + hour + prepand + ", " + minute + "min and " + second + "sec";  
+
+		var normalHour = today.getHours();
+		document.getElementById("timeNormal").innerHTML = "Today is: " + dayList[day] + "<br>Current time is: " + normalHour + ":" + minute + ":" + second; 
+	</script>
+
+	<script>
+		var todayDate = new Date();
+		var dd = todayDate.getDate();	//getDay se koristi samo za denojte u nedeljata, i se prikazani so 1, 2 3... a ti treba da gi konvertitras u ponedelnik vtornik so array, pocinjajci od nedelja. a getDate e za zemanje na denojte u mesecot
+		var mm = todayDate.getMonth()+1;	//mesecite pocinjaa od 0, zatoa treba da se dodade plus 1
+		var yyyy = todayDate.getFullYear();	//ako se pise samo getYear, se dava godinata od vekot, znaci -2000
+
+		if(dd<10) {
+			dd="0" + dd;
+		}
+
+		if(mm<10) {
+			mm="0" + mm;
+		}
+
+		var todayDate1 = mm + "-" + dd + "-" + yyyy;
+		document.getElementById("date1").innerHTML = todayDate1 + "<br>";
+
+		var todayDate2 = mm + "/" + dd + "/" + yyyy;
+		document.getElementById("date2").innerHTML = todayDate2 + "<br>";
+
+		var todayDate3 = dd + "-" + mm + "-" + yyyy;
+		document.getElementById("date3").innerHTML = todayDate3 + "<br>";
+
+		var todayDate4 = dd + "/" + mm + "/" + yyyy;
+		document.getElementById("date4").innerHTML = todayDate4;
+
+
+	</script>
+</body>
+</html>

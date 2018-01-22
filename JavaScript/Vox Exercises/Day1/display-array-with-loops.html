@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Read elements in array with For loop and While loop</title>
+	<style>
+		span {
+			color: #C51650;
+		}
+
+		p, div {
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<h2>Here will be displayed cities in Macedonia in <span>div</span> tag, separated with <span>&lt;br&gt;</span> element:</h2>
+	<div id="cityId"></div>
+	<hr>
+	<h2>Here will be shown some animals in <span>p</span> tag, separated with <span>comma and white space</span>: </h2>
+	<p id="animalID"></p>
+
+
+	<script>
+
+		var citiesArray = ["Tetovo", "Skopje", "Ohrid", "Kumanovo", "Prilep", "Struga", "Strumica", "Gostivar", "Kicevo", "Kocani", "Bitola", "Veles", "Debar"];
+
+		var city="";	//we need to assign an empty string first, so that we have a variable to fill in with the citiesArray from the array
+
+		// FOR LOOP
+		for(var i=0; i<citiesArray.length; i++){
+			city += (citiesArray[i] + "<br>");	//u varijablata city dodaj go naredniot podatok od nizata
+		}
+
+		document.getElementById("cityId").innerHTML = city;	//go zema elementot od HTML sto ima id "cityId" i na toj element mu vika, popolni go so kontentot sto se sodrzi u variablata city od JS
+
+		////////////////////////////////////////////////////////////////////////////
+
+		var animals = ["Tiger", "Rabbit", "Cat", "Dog", "Lion", "Giraffe", "Horse", "Goat", "Penguin", "Turtle", "Hippo", "Ship", "Monkey", "Kangoroo", "Panda"];
+
+		var animal = "";
+		// WHILE LOOP
+		var a=0;
+		while (a<animals.length){
+			animal += (animals[a] + ", ");
+				a++;
+			}
+
+			document.getElementById("animalID").innerHTML = animal;
+			
+	</script> 
+</body>
+</html>

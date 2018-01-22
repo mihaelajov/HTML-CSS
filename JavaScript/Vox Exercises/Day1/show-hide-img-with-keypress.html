@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Show or Hide photo(s) on specific keypress</title>
+	<style>
+		img {
+		height: 150px;
+		width: auto;
+		display: inline;
+		}
+	</style>
+</head>
+<body>
+	<p>Press the number of the photo to show only that photo. Press 5 to show all photos or press 6 to hide all photos</p>
+
+	<img src="https://www.w3schools.com/w3css/img_fjords.jpg" id="img1">
+	<img src="https://cdn.pixabay.com/photo/2016/03/28/12/35/cat-1285634_960_720.png" id="img2">
+	<img src="https://www.gettyimages.ca/gi-resources/images/Homepage/Hero/UK/CMS_Creative_164657191_Kingfisher.jpg" id="img3">
+	<img src="http://i.dailymail.co.uk/i/pix/2014/06/13/article-2657035-1EB9364500000578-998_634x421.jpg" id="img4">
+
+	<script>
+		var body = document.querySelector('body');	//"document.querySelector('body')" znaci deka selektiras sve od "body" elementot, a "var body" e samo ime na promenliva za da moze da se iskoristi za funkcijata kj sto se pritiska kopce
+
+		function hide() {
+			var x = document.getElementsByTagName('img');
+			for (var i = 0; i < x.length; i++) {
+				console.log(x[i].style.visibility = "hidden");
+			}
+		}
+
+		function show() {
+			var x = document.getElementsByTagName('img');
+			for (var i = 0; i < x.length; i++) {
+				console.log(x[i].style.visibility = "visible");
+			}
+		}
+
+		body.onkeydown = function (e) {
+			if ( !e.metaKey) {
+				e.preventDefault();	//your browser use some keys to call some functions, so we'll prevent this
+			}
+
+			if ( e.key == 1) {
+				var x = document.getElementById("img1");
+				hide();
+				x.style.visibility="visible";
+			}
+
+			if ( e.key == 2) {
+				var x = document.getElementById("img2");
+				hide();
+				x.style.visibility="visible";
+			}
+
+			if ( e.key == 3) {
+				var x = document.getElementById("img3");
+				hide();
+				x.style.visibility="visible";
+			}
+
+			if ( e.key == 4) {
+				var x = document.getElementById("img4");
+				hide();
+				x.style.visibility="visible";
+			}
+
+			if ( e.key == 5) {
+				var x = document.getElementsByTagName("show");
+				show();
+			}
+
+			if ( e.key == 6) {
+				var x = document.getElementsByTagName("img");
+				hide();
+			}
+		}
+	</script>
+</body>
+</html>

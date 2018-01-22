@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Log keyboard characters on press</title>
+</head>
+<body>
+	
+<!-- ZA DA IZLEZE U KONZOLA ODMA TOA STO KUCAS
+ova e korisno za koga se pravi igra, primer se korista kopcinjata W A S D, i se kazue kj ce se klikne A da se desi toa i toa.... -->
+
+<input type="text" onkeydown="function (e)">
+
+<script>
+
+
+var body = document.querySelector('body');
+
+body.onkeydown = function (e) {
+  if ( !e.metaKey ) {
+    e.preventDefault();
+  }
+console.log(e.key);
+  }
+
+</script>
+</body>
+</html>
