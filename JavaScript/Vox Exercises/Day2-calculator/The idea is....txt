@@ -1,0 +1,16 @@
+To follow the mathematical rules, the calculator with arrays could be done in the following way:
+
+1. First, search for a "*" sign. If you find it, multiply the numbers around that sign (if sign = Array[i], then multiply Array[i-1] * Array[i+1]). After that is done, put the result in the same array, in the place of Array[i-1]. Delete/Remove Array[i] and Array[i+1], and pull all the remaining elements of the array two places left (so that there are no empty elements in the array). Repeat the procedure for the next "*" sign.
+2. When there are no left "*" elements in the array, repeat the same steps for the sign "/".
+3. When there are no left "/" elements in the array, repeat the same steps for the sign "-".
+4. When there are no left "-" elements in the array, just sum all the remaining numbers that are left in the array.
+
+
+Ilustration:
+Array = [ 3 + 2 * 5 + 1 / 2 - 6 ]	// first multiply the numbers
+Array = [ 3 + 10 + 1 / 2 - 6 ]		//next divide the numbers
+Array = [ 3 + 10 + 0.5 - 6 ]		//next, substract
+Array = [3+10+(-5.5)]               //then add all the remaining numbers
+Array = [7.5]                    ==> total = Array[0];
+
+Is it possible to store the results in the same array, and pull the remainng elements to the left?? Or do we need to use another array to store the result and all the remaining elements?
