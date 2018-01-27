@@ -14,12 +14,13 @@ h1 {
 
 .wrap {
     margin: 150px auto;
-    width: 50%;
-
+    width: 30%;
+    min-width: 500px;
 }
 
 table {
     font-size: 30px;
+    align-content: center;
 }
 
 table tr td {
