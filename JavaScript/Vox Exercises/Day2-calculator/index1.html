@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Calculator</title>
+</head>
+<body>
+   <div class="wrap">
+        <h1>Calculator</h1>
+
+        <table>
+           <tr>
+               <td colspan="4" style="font-size: 15px; text-align: right"><div id="operations"></div></td>
+           </tr>
+            <tr>
+                <td colspan="4"><div id="result"></div></td>
+            </tr>
+            <tr>
+                <td><button class="number" onclick="show(this)" value="7">7</button></td>
+                <td><button class="number" onclick="show(this)" value="8">8</button></td>
+                <td><button class="number" onclick="show(this)" value="9">9</button></td>
+                <td><button class="operator" onclick="show(this)" value="/">÷</button></td>
+            </tr>
+            <tr>
+                <td><button class="number" onclick="show(this)" value="4">4</button></td>
+                <td><button class="number" onclick="show(this)" value="5">5</button></td>
+                <td><button class="number" onclick="show(this)" value="6">6</button></td>
+                <td><button class="operator" onclick="show(this)" value="*">×</button></td>
+            </tr>
+            <tr>
+                <td><button class="number" onclick="show(this)" value="1">1</button></td>
+                <td><button class="number" onclick="show(this)" value="2">2</button></td>
+                <td><button class="number" onclick="show(this)" value="3">3</button></td>
+                <td><button class="operator" onclick="show(this)" value="-">-</button></td>
+            </tr>
+            <tr>
+                <td><button class="number" onclick="show(this)" value="0">0</button></td>
+                <td><button id="clear" onclick="clearTotal()">CE</button></td>
+                <td><button id="equal" onclick="equal()" value="equal">=</button></td>
+                <td><button class="operator" onclick="show(this)" value="+">+</button></td>
+            </tr>
+        </table>
+    </div>
+    
+    <script>
+        
+        var display = document.getElementById("result");
+        var showOperations = document.getElementById("operations");
+        var tempArray = []; //1, holds each character as a string
+        var tempNumbers = []; //2, holds each number as a number + signs as characters???
+        var tempSigns = [];
+        var temp = "";
+        var total = 0;
+        
+        function show(btn) {
+            var valueFromBtn = btn.innerHTML;
+            
+            
+            if(valueFromBtn == "+" || valueFromBtn == "-" || valueFromBtn == "×" || valueFromBtn == "÷"){
+                display.innerHTML =  valueFromBtn;
+                showOperations.innerHTML += " " + valueFromBtn + " ";
+            }
+            else{
+                showOperations.innerHTML += valueFromBtn;
+                if(display.innerHTML == "+" || display.innerHTML == "-" || display.innerHTML == "×" || display.innerHTML == "÷"){
+                    display.innerHTML = valueFromBtn;
+                    //showOperations.innerHTML += valueFromBtn;
+                    
+                }else{
+                    display.innerHTML += valueFromBtn;
+                }
+            }
+        }
+        
+        function equal() {
+            temp = showOperations.innerHTML;
+            tempArray = temp.split(" ");
+            
+//            display.innerHTML = total;
+//            showOperations.innerHTML = total;
+            
+            console.log("string = " + temp);
+            console.log("tempArray = " + tempArray.join());
+            
+            
+//            for(var i=0; i<tempArray.length; i++){
+//                tempNumbers[i] = parseInt(tempArray[i]);
+//                console.log(tempNumbers[i]);
+//                //tempSigns[i] = 
+//                
+//                if(isFinite(parseInt(tempArray[i]) == NaN)) {
+//                    console.log("Number: " + tempArray[i]);
+//                }
+//            }
+            
+            
+//            for (var i=0; i<tempArray.length; i++){
+//                if(parseInt(isNaN(tempArray[i]))){
+//                    tempNumbers[i] = tempArray[i];
+//                }else {
+//                    tempNumbers[i] = parseInt(tempArray[i]);
+//                }
+//            }
+//            console.log(tempNumbers.join());
+            
+            
+            //SUM
+            total = Number(tempArray[0]);
+            for (var i=1; i<tempArray.length-1; i++){
+                if (tempArray[i] = "+") {
+                    total = total + Number(tempArray[i+1]);
+                    console.log(total);
+                }
+            }           
+            
+            
+//            for(var i=1; i<tempArray.length; i++){
+//                for(var j=0; j<=i; j++){
+//                    if(tempArray[i] == "×") {
+//                    tempNumbers[j] = Number(tempArray[i-1]) * Number(tempArray[i+1]);
+//                    }else if (tempArray[i] == "÷"){
+//                        tempNumbers[j] = Number(tempArray[i-1]) / Number(tempArray[i+1]);
+//                    }else if (tempArray[i] == "-"){
+//                        tempNumbers[j] = Number(tempArray[i-1]) - Number(tempArray[i+1]);
+//                    }else if (tempArray[i] == "+"){
+//                        //tempNumbers[j] = Number(tempArray[i-1]) + Number(tempArray[i+1]);
+//                        total += tempNumbers.join();
+//                    }
+//                }
+//            }
+//            display.innerHTML = total;
+       }
+        
+        function clearTotal() {
+            display.innerHTML = "";
+            showOperations.innerHTML = "";
+            tempArray.length = 0;
+            tempNumbers.length = 0;
+            total = 0;
+        }
+        
+    </script>
+</body>
+</html>
+
+
+
