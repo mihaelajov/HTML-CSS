@@ -107,12 +107,14 @@
             
             //SUM
             total = Number(tempArray[0]);
-            for (var i=1; i<tempArray.length-1; i++){
+            for (var i=1; i<tempArray.length; i+=2){
                 if (tempArray[i] = "+") {
                     total = total + Number(tempArray[i+1]);
                     console.log(total);
                 }
-            }           
+            }
+            
+            display.innerHTML = total;
             
             
 //            for(var i=1; i<tempArray.length; i++){
