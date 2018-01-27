@@ -14,3 +14,15 @@ Array = [3+10+(-5.5)]               //then add all the remaining numbers
 Array = [7.5]                    ==> total = Array[0];
 
 Is it possible to store the results in the same array, and pull the remainng elements to the left?? Or do we need to use another array to store the result and all the remaining elements?
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+What has been said, by using the SLICE METHOD, and two arrays:
+
+Search for the first "*" sign in the initial Array1[] (the position of the first "*" in the array will be Array1[i]). When you find it:
+1. SLICE from Array1[0] until Array1[i-1], and put the sliced elements into new Array2[];
+2. Multiply Array1[i-1] * Array1[i+1] and PUSH the result into the new Array2[];
+3. SLICE from Array1[i+2] until Array1.length and PUSH the elements into the new Array2[];
+4. Since now Array2 consists of all the remaining elements that are needed for calculation, RESET the iniitial array: Array1.length = 0;
+
+Repeat the step again, but now move the elements from Array2 to Array1. Do this first for all "*" signs, the for all "/" signs, then for substraction, then for addition.... In the end we should remain with an Array with only one element in it, and that will be the TOTAL.
