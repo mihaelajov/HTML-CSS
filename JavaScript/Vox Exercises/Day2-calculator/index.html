@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Calculator</title>
+</head>
+<body>
+   <div class="wrap">
+        <h1>Calculator</h1>
+
+        <table>
+            <tr>
+                <td colspan="4"><div id="result"></div></td>
+            </tr>
+            <tr>
+                <td><button class="number" id="seven" onclick="display(this)">7</button></td>
+                <td><button class="number" onclick="display(this)">8</button></td>
+                <td><button class="number" onclick="display(this)">9</button></td>
+                <td><button class="operator" onclick="divide()" value="÷">÷</button></td>
+            </tr>
+            <tr>
+                <td><button class="number" onclick="display(this)">4</button></td>
+                <td><button class="number" onclick="display(this)">5</button></td>
+                <td><button class="number" onclick="display(this)">6</button></td>
+                <td><button class="operator" onclick="multiply()" value="×">×</button></td>
+            </tr>
+            <tr>
+                <td><button class="number" onclick="display(this)">1</button></td>
+                <td><button class="number" onclick="display(this)">2</button></td>
+                <td><button class="number" onclick="display(this)">3</button></td>
+                <td><button class="operator" onclick="substract()" value="-">-</button></td>
+            </tr>
+            <tr>
+                <td><button class="number" onclick="display(this)">0</button></td>
+                <td><button id="clear" onclick="clearTotal()">CE</button></td>
+                <td><button id="equal" onclick="equal()">=</button></td>
+                <td><button class="operator" onclick="add()" value="+">+</button></td>
+            </tr>
+        </table>
+    </div>
+    
+    <script>
+
+        var result = document.getElementById("result");
+        var temp = 0;
+        var total = 0;
+        var sign = "+";
+        
+        //DISPLAY number or mathematical sign
+        function display(btn) {
+            var x = btn.innerHTML;
+            
+            if(x == "÷" || x == "×" || x == "-" || x == "+"){
+                result.innerHTML = x;                
+            }else {
+                if(result.innerHTML == "÷" || result.innerHTML == "×" || result.innerHTML == "-" || result.innerHTML == "+"){
+                    result.innerHTML = "" + x;
+                }else{
+                result.innerHTML += x;
+                }
+            }
+        }
+        
+        //ADDITION       
+        function add() {
+            temp = Number(result.innerHTML);
+            document.getElementById("result").innerHTML="+";
+            total += temp;
+            
+            console.log(temp);
+            console.log(total);
+        }
+        
+        //SUBSTRACTION
+        function substract() {
+            temp = Number(result.innerHTML);
+            document.getElementById("result").innerHTML="-";
+            total -= temp;
+            
+            console.log(temp);
+            console.log(total);
+        }
+
+        //MULTIPLICATION
+        function multiply() {
+            if (total == 0) {   //not a solution: if calculated 10-10, which is equal to 0, and if that result is multiplied with 10, the result should be 0, but instead it will be 10
+                total = 1;
+            }
+            
+            temp = Number(result.innerHTML);
+            document.getElementById("result").innerHTML="×";
+            total *= temp;
+            
+            console.log(temp);
+            console.log(total);
+        }
+        
+        
+        //DIVISION
+        function divide() {
+            temp = Number(result.innerHTML);
+            document.getElementById("result").innerHTML="÷";
+            total /=temp;
+            
+            console.log(temp);
+            console.log(total);
+        }
+        
+        function equal() {
+            total 
+            document.getElementById("result").innerHTML = total;
+        }
+        
+        //CLEAR DISPLAY
+        function clearTotal() {
+            document.getElementById("result").innerHTML="";
+            temp = 0;
+            total = 0;
+        }
+        
+        
+    </script>
+</body>
+</html>
